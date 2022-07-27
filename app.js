@@ -25,6 +25,8 @@ const app = (state) => (
 console.log(app)
 console.log(typeof app)
 
+// argument , parameter
+
 const setAttributes = (element, attributes) => {
   return Object.keys(attributes).forEach(key =>
     element.setAttribute(key, attributes[key])
@@ -82,6 +84,14 @@ const diffAndReRender = (previousNode, currentNode) => {
 
 let name = "How Code Works"
 const virtualDOMTree = app({ name })
+/**
+ * app(
+ *  name: name
+ * )
+ */
+
+// 한번만 실행
+// vue 나 react 에서 mount 하는 부분
 const root = document.querySelector('#root')
 // console.log(renderer(virtualDOMTree))
 root.appendChild(renderer(virtualDOMTree))
